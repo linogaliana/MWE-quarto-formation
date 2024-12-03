@@ -6,9 +6,12 @@ on:
       - main
   workflow_dispatch:
 
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4

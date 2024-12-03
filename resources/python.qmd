@@ -1,0 +1,21 @@
+---
+title: "Hello SSPCloud"
+---
+
+`Jupyter` notebooks[^jupyter] offer an interactive interface that allows you to write `Python` code, test it, and see the result below the instruction rather than in a separate console. `Jupyter` notebooks are essential in the fields of data science and education and research because they greatly simplify exploration and experimentation.
+
+They allow you to combine text in `Markdown` format (a lighter markup text format than `HTML` or $\LaTeX$), `Python` code, and `HTML` code for visualizations and animations in a single document.
+
+[^jupyter]: `Jupyter` originated from the `IPython` project, an interactive environment for `Python` developed by Fernando Pérez in 2001. In 2014, the project evolved to support other programming languages in addition to Python, leading to the creation of the Jupyter project. The name "Jupyter" is an acronym referring to the three main languages it supports: `Julia`, `Python`, and `R`. `Jupyter` notebooks are crucial in the fields of data science and education and research because they greatly simplify exploration and experimentation.
+
+![Illustration of a Jupyter notebook concept. Source: [Python Course for Life Sciences (Paris 18) by Patrick Fuchs and Pierre Poulain](https://python.sdv.u-paris.fr/)](https://python.sdv.u-paris.fr/img/jupyter-exemple.png)
+
+Initially, `Jupyter` was the only software offering these interactive features. Now, there are other ways to benefit from notebook advantages while having an IDE with more comprehensive features than `Jupyter`. For this reason, as of 2024, it is more practical to use `VSCode`[^vscode-python], a general-purpose code editor but offering excellent features in `Python`, than `Jupyter`. For more information on using notebooks in VSCode, refer to the [official documentation](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
+
+`Jupyter` gives access to interactive tutorials
+
+```{python}
+import pandas as pd
+df = pd.read_csv("https://koumoul.com/s/data-fair/api/v1/datasets/igt-pouvoir-de-rechauffement-global/convert")
+df.head(2)
+```

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Lino Galiana">
 
-<title>Creating educational resources for sspcloud users – Training startup</title>
+<title>About – Training startup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -124,7 +90,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
@@ -138,28 +104,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#why-share-educational-resources-on-sspcloud" id="toc-why-share-educational-resources-on-sspcloud" class="nav-link active" data-scroll-target="#why-share-educational-resources-on-sspcloud">Why share educational resources on SSPCloud?</a></li>
-  <li><a href="#step-1-creating-resources-with-quarto" id="toc-step-1-creating-resources-with-quarto" class="nav-link" data-scroll-target="#step-1-creating-resources-with-quarto">Step 1: creating resources with <code>Quarto</code></a></li>
-  <li><a href="#make-your-resources-available" id="toc-make-your-resources-available" class="nav-link" data-scroll-target="#make-your-resources-available">Make your resources available</a>
-  <ul class="collapse">
-  <li><a href="#make-a-ready-to-use-link-to-your-resources" id="toc-make-a-ready-to-use-link-to-your-resources" class="nav-link" data-scroll-target="#make-a-ready-to-use-link-to-your-resources">Make a ready to use link to your resources</a></li>
-  </ul></li>
-  <li><a href="#list-your-resources-on-the-training-portal" id="toc-list-your-resources-on-the-training-portal" class="nav-link" data-scroll-target="#list-your-resources-on-the-training-portal">List your resources on the training portal</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Creating educational resources for sspcloud users</h1>
-<p class="subtitle lead">Startup guide</p>
+<h1 class="title">About</h1>
 </div>
 
 
@@ -182,158 +135,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This tutorial aims to be a practical guide for people building <code>R</code> or <code>Python</code> educational resources and wishing to facilitate access to them through the SSPCloud.</p>
-<p>It requires a minimum knowledge on:</p>
-<ul>
-<li>A minimum level of proficiency in Git is required to develop and make available online training resources. However, this facilitated provision of resources does not imply that trainees are familiar with Git.</li>
-<li><a href="https://quarto.org/"><code>Quarto</code></a> the automated report and website builder inherited from R Markdown</li>
-<li><a href="https://docs.sspcloud.fr/en/"><code>SSPCloud</code> documentation</a>, in particular the fundamental difference between making resources available for execution on a local computer or on a server like the SSPCloud.</li>
-</ul>
-<p>The aim of this tutorial is also to propose a minimal template to get you started more quickly on building educational resources that are state-of-the-art in terms of reproducibility.</p>
-<section id="why-share-educational-resources-on-sspcloud" class="level1">
-<h1>Why share educational resources on SSPCloud?</h1>
-<p>Sharing educational resources on SSPCloud offers several advantages, particularly for educators and learners working with computational tools like R or Python. Here are the key benefits:</p>
-<ol type="1">
-<li><p><strong>Access to Computational Resources</strong><br>
-By hosting educational resources on SSPCloud, users can leverage powerful computational resources provided by the platform. This is especially valuable for running intensive data analyses, simulations, or machine learning models without requiring high-performance local machines.</p></li>
-<li><p><strong>Access to a Standardized Environment</strong><br>
-SSPCloud provides a pre-configured and standardized environment with the necessary packages, libraries, and system dependencies. This minimizes the common issues of version mismatches and missing dependencies, ensuring that all users have a consistent setup to work from, regardless of their local configuration.</p></li>
-<li><p><strong>Simple Launch via an HTTPS Link</strong><br>
-Resources on SSPCloud can be accessed and launched with a simple HTTPS link. This eliminates the complexity of manual setup or configuration, enabling users to start working with the resources almost instantly, directly in their browser.</p></li>
-</ol>
-<p>As the <a href="https://docs.sspcloud.fr/en/"><code>SSPCloud</code> documentation</a> explains, it’s important to understand that with this platform, code (<code>Git</code>), data (<code>S3</code>) and configuration are stored separately, while the compute space brings these three elements together. For training designers, this makes resources highly reproducible, with full control over the environment. For the users of these resources, it means that they no longer have to install software, play with their machine’s rights, etc., before they can get started on the tutorial.</p>
-<p><img src="https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/img/environment_clean.png" class="img-fluid"></p>
-</section>
-<section id="step-1-creating-resources-with-quarto" class="level1">
-<h1>Step 1: creating resources with <code>Quarto</code></h1>
-<p>Quarto is an open source program for creating Python and R tutorials. It can handle many output formats, including html, pdf or notebook (.ipynb extension).</p>
-<p><img src="pics/quarto.png" class="img-fluid"></p>
-<p>We’re going to make the following assumptions about the way in which training is made available:</p>
-<ul>
-<li>In Python, we assume that the training will be made available in the form of a notebook. This is the standard delivery method for Python code.</li>
-<li>In R, notebooks are not frequently used, so we assume that the training will be made available in the form of an RStudio project.</li>
-</ul>
-<p>The next paragraphs explain how to create the starting tutorial, depending on whether you want to write R or Python resources. It’s important to distinguish between the actions to be taken here and those that will be required of training users. For the latter, more direct ways of retrieving the training resource will be possible.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Starting from a ready to use environment when developing resources
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>SSPCloud is useful for trainees but also for trainers. It is quite convenient to use that plateform when developing educational resources: given the way it works, this will help a lot to make your educational resources reproducible.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>The easiest way to do this is to start with an environment equivalent to that used for training: the sspcloud. To do this, open a service with this link: https://datalab.sspcloud.fr/launcher/ide/rstudio?name=rstudio&amp;version=2.1.13&amp;s3=region-ec97c721&amp;networking.user.enabled=true&amp;autoLaunch=true</p>
-<p>Fork repository to get your own editable template.</p>
-<p>We assume you’re cloning that repository using RStudio clone button</p>
-<p><img src="https://book.cds101.com/img/clone_step_3.png" class="img-fluid"></p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>When developing Quarto resources, it is easier to use VSCode than Jupyter. This does not mean that you are forcing your trainees to use VSCode, they will be able to open your output with Jupyter.</p>
-<p>Open a service with this link: https://datalab.sspcloud.fr/launcher/ide/vscode-python?name=vscode-python&amp;version=2.1.18&amp;s3=region-ec97c721&amp;networking.user.enabled=true</p>
-<p>Fork repository to get your own editable template.</p>
-<p>We assume you’re cloning that repository</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone XXXXX</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You can delete <code>resources/r.qmd</code>. Open and have a look to <code>resources/python.qmd</code> in your local repository.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>Depending on the language you want to use, you can lighten the repository of unnecessary elements.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>You can delete <code>resources/python.qmd</code>.</p>
-<p>Open, have a look to and update <code>resources/r.qmd</code> in your local repository.</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>You can delete <code>resources/r.qmd</code>.</p>
-<p>Open, have a look to and update <code>resources/python.qmd</code> in your local repository.</p>
-</div>
-</div>
-</div>
-<p>Now assuming you want to give access to your resources as an html website, from command line you can preview your website using</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview <span class="at">--port</span> 5000 <span class="at">--host</span> 0.0.0.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Then go to https://datalab.sspcloud.fr/my-services, open the README of the service you use and click on the section regarding external port opened [capture à faire].</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>You can jump to next session</p>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>It makes more sense to provide your trainees with a jupyter notebook. To generate it, you can write</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render <span class="at">--to</span> ipynb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Notebooks will be written in the <code>_site</code> folder</p>
-</div>
-</div>
-</div>
-<p>We’ll now assume that you’re satisfied with the resources you’ve built and want to make them available to your trainees.</p>
-</section>
-<section id="make-your-resources-available" class="level1">
-<h1>Make your resources available</h1>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>First push on main. Then create a github pages branch</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--orphan</span> gh-pages</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="co"># make sure all changes are committed before running this!</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--allow-empty</span> <span class="at">-m</span> <span class="st">"Initialising gh-pages branch"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<p>To generalize the previous approach, we need to automate output construction through github actions.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<p>Replace content of <code>.github/workflows/prod.yml</code> by content stored inside <code>resources/workflows/r.yaml</code></p>
-</div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<p>Replace content of <code>.github/workflows/prod.yml</code> by content stored inside <code>resources/workflows/python.yaml</code></p>
-</div>
-</div>
-</div>
-<p>Push your repository, observe the content deployed using Github pages.</p>
-<section id="make-a-ready-to-use-link-to-your-resources" class="level2">
-<h2 class="anchored" data-anchor-id="make-a-ready-to-use-link-to-your-resources">Make a ready to use link to your resources</h2>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-
-</div>
-<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="list-your-resources-on-the-training-portal" class="level1">
-<h1>List your resources on the training portal</h1>
-<p>TO DO</p>
+<p>About this site</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Creating educational resources for sspcloud users",
+    "section": "",
+    "text": "This tutorial aims to be a practical guide for people building R or Python educational resources and wishing to facilitate access to them through the SSPCloud.\nIt requires a minimum knowledge on:\nThe aim of this tutorial is also to propose a minimal template to get you started more quickly on building educational resources that are state-of-the-art in terms of reproducibility."
+  },
+  {
+    "objectID": "index.html#make-a-ready-to-use-link-to-your-resources",
+    "href": "index.html#make-a-ready-to-use-link-to-your-resources",
+    "title": "Creating educational resources for sspcloud users",
+    "section": "Make a ready to use link to your resources",
+    "text": "Make a ready to use link to your resources\n\nRPython"
+  },
+  {
+    "objectID": "resources/python.html",
+    "href": "resources/python.html",
+    "title": "Hello SSPCloud",
+    "section": "",
+    "text": "Jupyter notebooks1 offer an interactive interface that allows you to write Python code, test it, and see the result below the instruction rather than in a separate console. Jupyter notebooks are essential in the fields of data science and education and research because they greatly simplify exploration and experimentation.\nThey allow you to combine text in Markdown format (a lighter markup text format than HTML or \\(\\LaTeX\\)), Python code, and HTML code for visualizations and animations in a single document.\nInitially, Jupyter was the only software offering these interactive features. Now, there are other ways to benefit from notebook advantages while having an IDE with more comprehensive features than Jupyter. For this reason, as of 2024, it is more practical to use VSCode[^vscode-python], a general-purpose code editor but offering excellent features in Python, than Jupyter. For more information on using notebooks in VSCode, refer to the official documentation.\nJupyter gives access to interactive tutorials\nimport pandas as pd\ndf = pd.read_csv(\"https://koumoul.com/s/data-fair/api/v1/datasets/igt-pouvoir-de-rechauffement-global/convert\")\ndf.head(2)\n\n\n\n\n\n\n\n\nINSEE commune\nCommune\nAgriculture\nAutres transports\nAutres transports international\nCO2 biomasse hors-total\nDéchets\nEnergie\nIndustrie hors-énergie\nRésidentiel\nRoutier\nTertiaire\n\n\n\n\n0\n01001\nL'ABERGEMENT-CLEMENCIAT\n3711.425991\nNaN\nNaN\n432.751835\n101.430476\n2.354558\n6.911213\n309.358195\n793.156501\n367.036172\n\n\n1\n01002\nL'ABERGEMENT-DE-VAREY\n475.330205\nNaN\nNaN\n140.741660\n140.675439\n2.354558\n6.911213\n104.866444\n348.997893\n112.934207"
+  },
+  {
+    "objectID": "resources/python.html#footnotes",
+    "href": "resources/python.html#footnotes",
+    "title": "Hello SSPCloud",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nJupyter originated from the IPython project, an interactive environment for Python developed by Fernando Pérez in 2001. In 2014, the project evolved to support other programming languages in addition to Python, leading to the creation of the Jupyter project. The name “Jupyter” is an acronym referring to the three main languages it supports: Julia, Python, and R. Jupyter notebooks are crucial in the fields of data science and education and research because they greatly simplify exploration and experimentation.↩︎"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

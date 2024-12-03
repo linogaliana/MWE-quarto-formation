@@ -27,8 +27,9 @@ jobs:
       - run: |
           quarto render --to html
           quarto render --to ipynb
-      - name: Publish to GitHub Pages (and render)
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          render: false
-          target: gh-pages
+      - name: Publish to Pages
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config --global user.email quarto-github-actions-publish@example.com
+          git config --global user.name "Quarto GHA Workflow Runner"
+          quarto publish gh-pages . --no-render --no-browser

@@ -27,6 +27,12 @@ jobs:
       - run: |
           quarto render --to html
           quarto render --to ipynb
+      - name: Archive build as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitedir
+          path: |
+            _site
       - name: Publish to Pages
         if: github.ref == 'refs/heads/main'
         run: |

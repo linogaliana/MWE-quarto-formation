@@ -1,0 +1,30 @@
+---
+title: "Creating educational resources for sspcloud users"
+subtitle: "Startup guide"
+author: "Lino Galiana"
+---
+
+This tutorial aims to be a practical guide for people building `R` or `Python` educational resources and wishing to facilitate access to them through the SSPCloud.
+
+It requires a minimum knowledge on:
+
+- [`Quarto`](https://quarto.org/) the automated report and website builder inherited from R Markdown
+- [`SSPCloud` documentation](https://docs.sspcloud.fr/en/), in particular the fundamental difference between making resources available for execution on a local computer or on a server like the sspcloud. 
+
+The aim of this tutorial is also to propose a minimal template to get you started more quickly on building educational resources that are state-of-the-art in terms of reproducibility. 
+
+# Why share educational resources on SSPCloud?
+
+Sharing educational resources on SSPCloud offers several advantages, particularly for educators and learners working with computational tools like R or Python. Here are the key benefits:
+
+1. **Access to Computational Resources**  
+   By hosting educational resources on SSPCloud, users can leverage powerful computational resources provided by the platform. This is especially valuable for running intensive data analyses, simulations, or machine learning models without requiring high-performance local machines.
+
+2. **Access to a Standardized Environment**  
+   SSPCloud provides a pre-configured and standardized environment with the necessary packages, libraries, and system dependencies. This minimizes the common issues of version mismatches and missing dependencies, ensuring that all users have a consistent setup to work from, regardless of their local configuration.
+
+3. **Simple Launch via an HTTPS Link**  
+   Resources on SSPCloud can be accessed and launched with a simple HTTPS link. This eliminates the complexity of manual setup or configuration, enabling users to start working with the resources almost instantly, directly in their browser.
+
+These features make SSPCloud an ideal platform for delivering reproducible and accessible educational resources that reduce technical barriers for learners while ensuring consistency and reliability in computational workflows.
+

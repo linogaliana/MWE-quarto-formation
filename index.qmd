@@ -12,6 +12,7 @@ It requires a minimum knowledge on:
 - A minimum level of proficiency in Git is required to develop and make available online training resources. However, this facilitated provision of resources does not imply that trainees are familiar with Git.
 - [`Quarto`](https://quarto.org/) the automated report and website builder inherited from R Markdown
 - [`SSPCloud` documentation](https://docs.sspcloud.fr/en/), in particular the fundamental difference between making resources available for execution on a local computer or on a server like the SSPCloud. 
+- Some knowledge regarding deployment of resources using `Github Actions` are useful. This tutorial gives a few templates but understanding them is not in the scope of that tutorial. 
 
 The aim of this tutorial is also to propose a minimal template to get you started more quickly on building educational resources that are state-of-the-art in terms of reproducibility. 
 

@@ -164,8 +164,14 @@ Replace content of `.github/workflows/prod.yml` by content stored inside `resour
 
 Push your repository, observe the content deployed using Github pages. 
 
+## Make a ready to use link to your resources
 
+::: {.panel-tabset}
+## R
 
+## Python
+
+:::
 
 # List your resources on the training portal
 

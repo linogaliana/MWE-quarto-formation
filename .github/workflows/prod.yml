@@ -25,7 +25,7 @@ jobs:
 
       - run: |
           quarto render --to html
-          quarto render --to ipynb
+          quarto render resources/python.qmd --to ipynb
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:

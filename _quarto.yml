@@ -7,7 +7,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
 
 format:
   html:
@@ -17,3 +16,4 @@ format:
 
 
 
+author: "Lino Galiana"

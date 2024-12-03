@@ -4,6 +4,7 @@ subtitle: "Startup guide"
 author: "Lino Galiana"
 ---
 
+
 This tutorial aims to be a practical guide for people building `R` or `Python` educational resources and wishing to facilitate access to them through the SSPCloud.
 
 It requires a minimum knowledge on:

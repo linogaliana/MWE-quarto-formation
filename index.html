@@ -145,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#why-share-educational-resources-on-sspcloud" id="toc-why-share-educational-resources-on-sspcloud" class="nav-link active" data-scroll-target="#why-share-educational-resources-on-sspcloud">Why share educational resources on SSPCloud?</a></li>
   <li><a href="#step-1-creating-resources-with-quarto" id="toc-step-1-creating-resources-with-quarto" class="nav-link" data-scroll-target="#step-1-creating-resources-with-quarto">Step 1: creating resources with <code>Quarto</code></a></li>
-  <li><a href="#make-your-resources-available" id="toc-make-your-resources-available" class="nav-link" data-scroll-target="#make-your-resources-available">Make your resources available</a>
+  <li><a href="#make-your-resources-available-on-an-online-website" id="toc-make-your-resources-available-on-an-online-website" class="nav-link" data-scroll-target="#make-your-resources-available-on-an-online-website">Make your resources available on an online website</a>
   <ul class="collapse">
   <li><a href="#make-a-ready-to-use-link-to-your-resources" id="toc-make-a-ready-to-use-link-to-your-resources" class="nav-link" data-scroll-target="#make-a-ready-to-use-link-to-your-resources">Make a ready to use link to your resources</a></li>
   </ul></li>
@@ -282,26 +282,28 @@ Starting from a ready to use environment when developing resources
 </div>
 <p>We’ll now assume that you’re satisfied with the resources you’ve built and want to make them available to your trainees.</p>
 </section>
-<section id="make-your-resources-available" class="level1">
-<h1>Make your resources available</h1>
+<section id="make-your-resources-available-on-an-online-website" class="level1">
+<h1>Make your resources available on an online website</h1>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Github actions needs a <code>gh-pages</code> branch to deploy websites
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>First push on main. Then create a github pages branch</p>
+<p>When developing resources, you use <code>main</code> branch. However, for <code>Github Actions</code> to work, you need an additional branch <code>gh-pages</code>. This one will be rewritten automatically by <code>Github</code> after every Github Actions pipeline. However, you need to create it first.</p>
+<p>Quarto documentation gives this command to create that branch:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--orphan</span> gh-pages</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="co"># make sure all changes are committed before running this!</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--allow-empty</span> <span class="at">-m</span> <span class="st">"Initialising gh-pages branch"</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Be careful with that command, do not use before having done a first push on Github.</strong></p>
 </div>
 </div>
-<p>To generalize the previous approach, we need to automate output construction through github actions.</p>
+<p>To generalize the previous approach, we need to automate output construction through Github Actions.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
@@ -313,9 +315,10 @@ Warning
 </div>
 </div>
 </div>
-<p>Push your repository, observe the content deployed using Github pages.</p>
+<p>Commit and push that new file. Look at the new pipeline that starts after every push on <code>main</code> branch. Once succeeded, you should have a publicly available website that has been deployed on a Github pages website.</p>
 <section id="make-a-ready-to-use-link-to-your-resources" class="level2">
 <h2 class="anchored" data-anchor-id="make-a-ready-to-use-link-to-your-resources">Make a ready to use link to your resources</h2>
+<p>Let’s assume now you want trainees to avoid copy-pasting code from your program to their sandbox environment. SSPCloud proposes a feature that enables to launch a ready to use sandbox with one click. This enables to start an environment that can be overloaded by some parameters that would make trainees ready to start their learning experience.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">

@@ -47,23 +47,23 @@ Moreover, `renv` works seamlessly with RStudio projects:
 3. **Integration with Version Control**
 - The lockfile can be committed to Git, allowing collaborators to replicate the same environment by running `renv::restore()`.
 
-### Example
+### `renv` workflow
 
+First, if not automatically initiated, you need to start following dependencies using `renv`:
 
 ```{r initialize}
 # Initialize renv
 renv::init()
 ```
 
+Then, let's say your quarto document will make use of `dplyr` and `ggplot2`. In R command you write
+
 ```{.r}
 install.packages(c("ggplot2", "dplyr"))
 ```
 
-```{r update-lockfile}
-# Update the lockile
-renv::snapshot()
-```
 
+Then you can develop your document, let's say it contains this chunk
 
 ```{r plot}
 library(dplyr)
@@ -75,4 +75,14 @@ ggplot(iris) +
 geom_point(aes(x = Sepal.Length, y = Petal.Width, color = Species))
 
 ```
+
+
+Once you are happy with your document, you snapshot the reproducible environment you use:
+
+```{.r}
+# Update the lockile
+renv::snapshot()
+```
+
+
 

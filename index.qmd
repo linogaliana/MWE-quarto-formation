@@ -137,8 +137,11 @@ We'll now assume that you're satisfied with the resources you've built and want 
 # Make your resources available
 
 ::: {.callout-warning}
+## Github actions needs a `gh-pages` branch to deploy websites
 
-First push on main. Then create a github pages branch
+When developing resources, you use `main` branch. However, for Github Actions to work, you need an additional branch `gh-pages`. 
+
+hen create a github pages branch
 
 ```{.bash}
 git checkout --orphan gh-pages

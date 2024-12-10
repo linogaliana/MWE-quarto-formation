@@ -134,14 +134,14 @@ Notebooks will be written in the `_site` folder
 
 We'll now assume that you're satisfied with the resources you've built and want to make them available to your trainees.
 
-# Make your resources available
+# Make your resources available on an online website
 
 ::: {.callout-warning}
 ## Github actions needs a `gh-pages` branch to deploy websites
 
-When developing resources, you use `main` branch. However, for Github Actions to work, you need an additional branch `gh-pages`. 
+When developing resources, you use `main` branch. However, for `Github Actions` to work, you need an additional branch `gh-pages`. This one will be rewritten automatically by `Github` after every Github Actions pipeline. However, you need to create it first. 
 
-hen create a github pages branch
+Quarto documentation gives this command to create that branch:
 
 ```{.bash}
 git checkout --orphan gh-pages
@@ -150,11 +150,11 @@ git commit --allow-empty -m "Initialising gh-pages branch"
 git push origin gh-pages
 ```
 
+__Be careful with that command, do not use before having done a first push on Github.__
+
 :::
 
-
-
-To generalize the previous approach, we need to automate output construction through github actions.
+To generalize the previous approach, we need to automate output construction through Github Actions.
 
 ::: {.panel-tabset}
 ## R
@@ -167,12 +167,16 @@ Replace content of `.github/workflows/prod.yml` by content stored inside `resour
 
 :::
 
-Push your repository, observe the content deployed using Github pages. 
+Commit and push that new file. Look at the new pipeline that starts after every push on `main` branch. Once succeeded, you should have a publicly available website that has been deployed on a Github pages website. 
 
 ## Make a ready to use link to your resources
 
+Let's assume now you want trainees to avoid copy-pasting code from your program to their sandbox environment. SSPCloud proposes a feature that enables to launch a ready to use sandbox with one click. This enables to start an environment that can be overloaded by some parameters that would make trainees ready to start their learning experience. 
+
 ::: {.panel-tabset}
 ## R
+
+
 
 ## Python
 

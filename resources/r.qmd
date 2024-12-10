@@ -55,8 +55,7 @@ Moreover, `renv` works seamlessly with RStudio projects:
 renv::init()
 ```
 
-```{r install}
-# Install packages
+```{.r}
 install.packages(c("ggplot2", "dplyr"))
 ```
 

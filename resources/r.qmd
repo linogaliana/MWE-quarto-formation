@@ -8,6 +8,7 @@ Rstudio projects and  `renv` are two useful tools to offer a convenient interfac
 
 Rstudio Projects are a built-in feature of RStudio that help organize your work in a consistent and structured way. When you create an RStudio project, it establishes a self-contained working environment tied to a specific folder on your computer, containing all the files related to the project. An RStudio project is essentially a wrapper around a folder, with a file ending in `.Rproj` that stores project-specific settings.
 
+
 RStudio Projects have multiple advantages: 
 
 - __Easy script management and lisibility__: all scripts related to a task are kept in one designated folder, and are not mixed with scripts pertaining to unrelated tasks. The clear structure of RStudio projects ensures that collaborators can quickly understand and use your project.

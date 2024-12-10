@@ -19,9 +19,9 @@ jobs:
         with:
           python-version: '3.10'
       - run: |
-        pip install -r requirements.txt
-        sudo apt-get update
-        sudo apt-get install libglpk-dev
+          pip install -r requirements.txt
+          sudo apt-get update
+          sudo apt-get install libglpk-dev
       - name: Set up renv
         uses: r-lib/actions/setup-renv@v2
       - name: Set up quarto
